@@ -157,7 +157,7 @@ public class PushToAggregate {
     pushFormAndAttachments(form, attachments, runnerStatus, tracker, 1, 1);
   }
 
-  private void pushFormAndAttachments(FormStatus form, List<Path> attachments, RunnerStatus runnerStatus, PushToAggregateTracker tracker, int part, int parts) {
+  void pushFormAndAttachments(FormStatus form, List<Path> attachments, RunnerStatus runnerStatus, PushToAggregateTracker tracker, int part, int parts) {
     if (runnerStatus.isCancelled()) {
       tracker.trackCancellation("Push form");
       return;
@@ -171,7 +171,7 @@ public class PushToAggregate {
       tracker.trackErrorSendingFormAndAttachments(part, parts, response);
   }
 
-  private void pushSubmissionAndAttachments(Path submissionFile, List<Path> attachments, RunnerStatus runnerStatus, PushToAggregateTracker tracker, int submissionNumber, int totalSubmissions) {
+  void pushSubmissionAndAttachments(Path submissionFile, List<Path> attachments, RunnerStatus runnerStatus, PushToAggregateTracker tracker, int submissionNumber, int totalSubmissions) {
     pushSubmissionAndAttachments(submissionFile, attachments, runnerStatus, tracker, submissionNumber, totalSubmissions, 1, 1);
   }
 

@@ -15,5 +15,5 @@
  */
 package org.opendatakit.briefcase.model;
 
-class SavePasswordsConsentGiven {
+public class SavePasswordsConsentGiven {
 }

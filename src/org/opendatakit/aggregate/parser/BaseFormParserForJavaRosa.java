@@ -189,7 +189,7 @@ public class BaseFormParserForJavaRosa implements Serializable {
     private Document xmldoc;
     private BaseFormParserForJavaRosa parser;
 
-    XFormParserWithBindEnhancements(BaseFormParserForJavaRosa parser, Document form) {
+    private XFormParserWithBindEnhancements(BaseFormParserForJavaRosa parser, Document form) {
       super(form);
       this.xmldoc = form;
       this.parser = parser;

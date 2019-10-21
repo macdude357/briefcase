@@ -19,17 +19,33 @@ package org.opendatakit.briefcase.reused.http;
 import java.io.InputStream;
 import java.util.Objects;
 
-class MultipartMessage {
-  final String name;
-  final String contentType;
-  final String attachmentName;
-  final InputStream body;
+public class MultipartMessage {
+  private final String name;
+  private final String contentType;
+  private final String attachmentName;
+  private final InputStream body;
 
   MultipartMessage(String name, String contentType, String attachmentName, InputStream body) {
     this.name = name;
     this.contentType = contentType;
     this.attachmentName = attachmentName;
     this.body = body;
+  }
+
+  public String getName() {
+	return name;
+  }
+
+  public String getContentType() {
+	return contentType;
+  }
+
+  public String getAttachmentName() {
+	return attachmentName;
+  }
+
+  public InputStream getBody() {
+	return body;
   }
 
   @Override

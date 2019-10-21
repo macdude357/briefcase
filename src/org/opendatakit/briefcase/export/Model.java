@@ -233,7 +233,7 @@ class Model {
     return model.getParent() != null;
   }
 
-  private Stream<Model> flatten() {
+  Stream<Model> flatten() {
     return children().stream()
         .flatMap(e -> e.size() == 0 ? Stream.of(e) : concat(Stream.of(e), e.flatten()));
   }

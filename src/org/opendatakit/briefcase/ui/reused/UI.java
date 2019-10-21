@@ -98,7 +98,7 @@ public class UI {
   /**
    * Pops up an informative dialog
    */
-  private static void infoMessage(String title, String message) {
+  public static void infoMessage(String title, String message) {
     Runnable dialog = () -> JOptionPane.showMessageDialog(buildDialogParent(), message, title, PLAIN_MESSAGE);
     if (SwingUtilities.isEventDispatchThread())
       dialog.run();
@@ -119,7 +119,7 @@ public class UI {
   /**
    * Pops up a confirmation (YES/NO) dialog
    */
-  private static boolean confirm(String title, String message) {
+  public static boolean confirm(String title, String message) {
     return JOptionPane.showConfirmDialog(buildDialogParent(), message, title, YES_NO_OPTION, PLAIN_MESSAGE) == YES_OPTION;
   }
 

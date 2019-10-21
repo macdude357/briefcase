@@ -78,7 +78,7 @@ public class Analytics {
     event(category, action, label, value, true);
   }
 
-  private void event(String category, String action, String label, Integer value, boolean async) {
+  public void event(String category, String action, String label, Integer value, boolean async) {
     EventHit request = buildEventHit()
         .eventCategory(category)
         .eventAction(action);

@@ -338,7 +338,7 @@ public class ExportConfiguration {
   }
 
   public static class Builder {
-    static final Consumer<String> NO_OP = __ -> { };
+    private static final Consumer<String> NO_OP = __ -> { };
     private String exportFilename;
     private Path exportDir;
     private Path pemFile;
@@ -406,7 +406,7 @@ public class ExportConfiguration {
       return setExportFilename(Optional.ofNullable(fileName));
     }
 
-    Builder setExportFilename(Optional<String> fileName) {
+    private Builder setExportFilename(Optional<String> fileName) {
       exportFilename = fileName.orElse(null);
       return this;
     }
@@ -415,7 +415,7 @@ public class ExportConfiguration {
       return setExportDir(Optional.ofNullable(path), NO_OP);
     }
 
-    Builder setExportDir(Optional<Path> path) {
+    public Builder setExportDir(Optional<Path> path) {
       return setExportDir(path, NO_OP);
     }
 
@@ -474,7 +474,7 @@ public class ExportConfiguration {
       return this;
     }
 
-    Builder setDateRange(Optional<LocalDate> start, Optional<LocalDate> end) {
+    public Builder setDateRange(Optional<LocalDate> start, Optional<LocalDate> end) {
       this.dateRange = new DateRange(start, end);
       return this;
     }
@@ -549,7 +549,7 @@ public class ExportConfiguration {
       return this;
     }
 
-    Builder setSmartAppend(OverridableBoolean smartAppend) {
+    public Builder setSmartAppend(OverridableBoolean smartAppend) {
       this.smartAppend = smartAppend;
       return this;
     }

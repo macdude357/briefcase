@@ -66,7 +66,7 @@ public class BriefcasePreferences {
     this.preferences = preferences;
   }
 
-  private BriefcasePreferences(Class<?> node, PreferenceScope scope) {
+  public BriefcasePreferences(Class<?> node, PreferenceScope scope) {
     this.node = node;
     this.preferences = scope.preferenceFactory(node);
   }
@@ -91,7 +91,7 @@ public class BriefcasePreferences {
    * @return the value associated with key, or defaultValue if no value is associated
    *     with key, or the backing store is inaccessible.
    */
-  private String get(String key, String defaultValue) {
+  public String get(String key, String defaultValue) {
     return preferences.get(key, defaultValue);
   }
 
@@ -149,7 +149,7 @@ public class BriefcasePreferences {
    *
    * @param keys keys whose mappings are to be removed from the preference node.
    */
-  private void removeAll(String... keys) {
+  public void removeAll(String... keys) {
     removeAll(Arrays.asList(keys));
   }
 
@@ -291,7 +291,7 @@ public class BriefcasePreferences {
     return getBooleanProperty(BRIEFCASE_STORE_PASSWORDS_CONSENT_PROPERTY);
   }
 
-  private static boolean getBooleanProperty(String key) {
+  public static boolean getBooleanProperty(String key) {
     return Boolean.valueOf(Preference.APPLICATION_SCOPED.get(key, Boolean.FALSE.toString()));
   }
 
