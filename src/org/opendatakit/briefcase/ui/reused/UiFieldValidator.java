@@ -36,7 +36,7 @@ public class UiFieldValidator {
     return new UiFieldValidator(field, label, Stream.of(predicates).reduce(s -> true, Predicate::and));
   }
 
-  public void update() {
+  private void update() {
     boolean previousIsDirty = isDirty;
     boolean previousIsValid = isValid;
     String value = getValue();

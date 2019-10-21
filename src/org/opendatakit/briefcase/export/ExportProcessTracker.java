@@ -26,7 +26,7 @@ import org.bushe.swing.event.EventBus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ExportProcessTracker {
+class ExportProcessTracker {
   private static final Logger log = LoggerFactory.getLogger(ExportProcessTracker.class);
 
   private final FormDefinition form;

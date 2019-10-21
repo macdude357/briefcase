@@ -16,7 +16,7 @@
 
 package org.opendatakit.briefcase.ui;
 
-public class MessageStrings {
+class MessageStrings {
   static final String BRIEFCASE_WELCOME = "" +
       "Welcome to ODK Briefcase! Here are three things you should know to get started.\n" +
       "\n" +

@@ -113,7 +113,7 @@ public interface Cursor extends Comparable<Cursor>, AsJson {
       return factory.apply(rawValue);
     }
 
-    public String getName() {
+    String getName() {
       return name;
     }
   }

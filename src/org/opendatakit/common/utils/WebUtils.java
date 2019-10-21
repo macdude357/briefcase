@@ -26,7 +26,7 @@ import org.javarosa.core.model.utils.DateUtils;
  *
  * @author mitchellsundt@gmail.com
  */
-public class WebUtils {
+class WebUtils {
   /**
    * Date format pattern used to parse HTTP date headers in RFC 1123 format.
    * copied from apache.commons.lang.DateUtils

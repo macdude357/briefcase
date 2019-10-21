@@ -20,7 +20,7 @@ import org.opendatakit.briefcase.model.FormStatus;
 
 public class PushEvent {
 
-  public static class Failure extends PushEvent {
+  private static class Failure extends PushEvent {
     public Failure() {
     }
   }

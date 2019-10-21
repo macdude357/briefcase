@@ -91,7 +91,7 @@ public class BriefcasePreferences {
    * @return the value associated with key, or defaultValue if no value is associated
    *     with key, or the backing store is inaccessible.
    */
-  public String get(String key, String defaultValue) {
+  private String get(String key, String defaultValue) {
     return preferences.get(key, defaultValue);
   }
 
@@ -149,7 +149,7 @@ public class BriefcasePreferences {
    *
    * @param keys keys whose mappings are to be removed from the preference node.
    */
-  public void removeAll(String... keys) {
+  private void removeAll(String... keys) {
     removeAll(Arrays.asList(keys));
   }
 
@@ -259,7 +259,7 @@ public class BriefcasePreferences {
       }
     };
 
-    public abstract Preferences preferenceFactory(Class<?> node);
+    protected abstract Preferences preferenceFactory(Class<?> node);
   }
 
   /**

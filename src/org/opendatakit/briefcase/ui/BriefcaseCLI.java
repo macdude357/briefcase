@@ -284,7 +284,7 @@ public class BriefcaseCLI {
     return true;
   }
 
-  public void run() {
+  private void run() {
     String username = cli.getOptionValue(ODK_USERNAME);
     String password = cli.getOptionValue(ODK_PASSWORD);
     String server = cli.getOptionValue(AGGREGATE_URL);

@@ -19,7 +19,7 @@ package org.opendatakit.briefcase.reused.http;
 import java.io.InputStream;
 import java.util.Objects;
 
-public class MultipartMessage {
+class MultipartMessage {
   final String name;
   final String contentType;
   final String attachmentName;
