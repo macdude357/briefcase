@@ -568,7 +568,7 @@ public class BaseFormParserForJavaRosa implements Serializable {
    *     encryption.
    * @throws ODKIncompleteSubmissionData
    */
-   public static DifferenceResult compareXml(BaseFormParserForJavaRosa incomingParser,
+  public static DifferenceResult compareXml(BaseFormParserForJavaRosa incomingParser,
                                             String existingXml, String existingTitle, boolean isWithinUpdateWindow)
       throws ODKIncompleteSubmissionData {
     if (incomingParser == null || existingXml == null) {
@@ -734,9 +734,9 @@ public class BaseFormParserForJavaRosa implements Serializable {
    *     encryption.
    */
   public static DifferenceResult compareTreeElements(TreeElement treeElement1,
-                                                      BaseFormParserForJavaRosa parser1,
-                                                      TreeElement treeElement2,
-                                                      BaseFormParserForJavaRosa parser2) {
+                                                     BaseFormParserForJavaRosa parser1,
+                                                     TreeElement treeElement2,
+                                                     BaseFormParserForJavaRosa parser2) {
     boolean smalldiff = false;
     boolean bigdiff = false;
 
