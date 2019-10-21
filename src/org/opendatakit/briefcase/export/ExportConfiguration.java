@@ -405,8 +405,8 @@ public class ExportConfiguration {
     public Builder setExportFilename(String fileName) {
       return setExportFilename(Optional.ofNullable(fileName));
     }
-
-    private Builder setExportFilename(Optional<String> fileName) {
+    
+    public Builder setExportFilename(Optional<String> fileName) {
       exportFilename = fileName.orElse(null);
       return this;
     }

@@ -25,7 +25,8 @@ import org.opendatakit.briefcase.reused.transfer.RemoteServer;
 public class PullEvent {
 
   public static class Success extends PullEvent {
-    private final FormStatus form;
+
+	private final FormStatus form;
     private final Optional<RemoteServer> remoteServer;
     private final Optional<Cursor> lastCursor;
 
@@ -35,7 +36,19 @@ public class PullEvent {
       this.lastCursor = lastCursor;
     }
 
-    public static Success of(FormStatus form) {
+    public FormStatus getForm() {
+		return form;
+	}
+
+	public Optional<RemoteServer> getRemoteServer() {
+		return remoteServer;
+	}
+
+	public Optional<Cursor> getLastCursor() {
+		return lastCursor;
+	}
+
+	public static Success of(FormStatus form) {
       return new Success(form, Optional.empty(), Optional.empty());
     }
 

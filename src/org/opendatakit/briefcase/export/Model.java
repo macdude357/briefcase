@@ -115,7 +115,7 @@ class Model {
    * Returns the Fully Qualified Name of a given {@link TreeElement} model, having
    * shifted a given number of names.
    */
-  private static String fqn(TreeElement model, int shift) {
+  static String fqn(TreeElement model, int shift) {
     List<String> names = new ArrayList<>();
     TreeElement current = model;
     while (current.getParent() != null && current.getParent().getName() != null) {
@@ -233,7 +233,7 @@ class Model {
     return model.getParent() != null;
   }
 
-  Stream<Model> flatten() {
+  private Stream<Model> flatten() {
     return children().stream()
         .flatMap(e -> e.size() == 0 ? Stream.of(e) : concat(Stream.of(e), e.flatten()));
   }

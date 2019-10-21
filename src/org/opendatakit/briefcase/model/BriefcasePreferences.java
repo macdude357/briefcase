@@ -291,7 +291,7 @@ public class BriefcasePreferences {
     return getBooleanProperty(BRIEFCASE_STORE_PASSWORDS_CONSENT_PROPERTY);
   }
 
-  public static boolean getBooleanProperty(String key) {
+  private static boolean getBooleanProperty(String key) {
     return Boolean.valueOf(Preference.APPLICATION_SCOPED.get(key, Boolean.FALSE.toString()));
   }
 

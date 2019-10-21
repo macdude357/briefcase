@@ -555,10 +555,6 @@ public class BaseFormParserForJavaRosa implements Serializable {
     return (l);
   }
 
-  public String getFormId() {
-    return rootElementDefn.formId;
-  }
-
   /**
    * Compare two XML files to assess their level of structural difference (if
    * any).
@@ -572,7 +568,7 @@ public class BaseFormParserForJavaRosa implements Serializable {
    *     encryption.
    * @throws ODKIncompleteSubmissionData
    */
-  public static DifferenceResult compareXml(BaseFormParserForJavaRosa incomingParser,
+   public static DifferenceResult compareXml(BaseFormParserForJavaRosa incomingParser,
                                             String existingXml, String existingTitle, boolean isWithinUpdateWindow)
       throws ODKIncompleteSubmissionData {
     if (incomingParser == null || existingXml == null) {
@@ -737,7 +733,7 @@ public class BaseFormParserForJavaRosa implements Serializable {
    *     when forms are different enough to affect database structure and/or
    *     encryption.
    */
-  private static DifferenceResult compareTreeElements(TreeElement treeElement1,
+  public static DifferenceResult compareTreeElements(TreeElement treeElement1,
                                                       BaseFormParserForJavaRosa parser1,
                                                       TreeElement treeElement2,
                                                       BaseFormParserForJavaRosa parser2) {
